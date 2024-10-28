@@ -1,0 +1,42 @@
+# Nome da Action
+name: Snake Game
+
+# Agenda para rodar automaticamente a cada 5 horas e manualmente se necessário
+on:
+  schedule:
+    - cron: "0 */5 * * *"  # Atualiza a cada 5 horas
+  workflow_dispatch:  # Permite execução manual do workflow
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Faz o checkout do repositório
+      - uses: actions/checkout@v3
+
+      # Gera os arquivos da animação (GIF e SVG)
+      - uses: Platane/snk@master
+        id: snake-gif
+        with:
+          github_user_name: vinicioolivindo  # Substitua pelo seu nome de usuário
+          gif_out_path: dist/github-contribution-grid-snake.gif
+          svg_out_path: dist/github-contribution-grid-snake.svg
+
+      # Configura o Git e realiza o push das alterações
+      - name: Commit and Push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Atualizando animação Snake Game"
+          git push origin master --force
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Publica a animação na branch `output` (GitHub Pages)
+      - uses: crazy-max/ghaction-github-pages@v3
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
