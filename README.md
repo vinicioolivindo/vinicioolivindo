@@ -1,7 +1,4 @@
 
-<img src="https://raw.githubusercontent.com/vinicioolivindo/vinicioolivindo/output/snake.svg" alt="Snake animation" />
-
-###
 <!--título-->
 <div id="user-content-toc">
   <ul align="center">
