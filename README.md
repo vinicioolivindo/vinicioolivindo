@@ -1,3 +1,4 @@
+![Snake animation](https://github.com/vinicioolivindo/vinicioolivindo/raw/output/github-contribution-grid-snake.svg)
 
 <!--título-->
 <div id="user-content-toc">
