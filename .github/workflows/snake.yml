@@ -9,24 +9,28 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # Faz o checkout do repositório
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Garante todas as branches
 
-      # Gera os arquivos do Snake Game
+      - name: Switch to output branch
+        run: |
+          git fetch origin output  # Busca a branch output
+          git checkout output      # Muda para a branch output
+
       - uses: Platane/snk@master
         id: snake-gif
         with:
-          github_user_name: vinicioolivindo  # Substitua pelo seu nome de usuário
+          github_user_name: vinicioolivindo
           gif_out_path: dist/github-contribution-grid-snake.gif
           svg_out_path: dist/github-contribution-grid-snake.svg
 
-      # Configura o Git e faz commit/push para a branch output
       - name: Commit and Push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add dist
-          git commit -m "Atualizando animação Snake Game"
+          git commit -m "Atualizando animação Snake Game" || echo "Nada para commitar"
           git push origin output --force
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
