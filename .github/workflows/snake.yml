@@ -21,12 +21,13 @@ jobs:
           svg_out_path: dist/github-contribution-grid-snake.svg
 
       # Configura o Git e faz commit/push para a branch output
-      - name: Commit and Push changes
+       - name: Commit and Push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add dist
           git commit -m "Atualizando animação Snake Game"
-          git push origin output --force
+          git push origin output
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
