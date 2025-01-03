@@ -27,7 +27,7 @@
 <!-- GithubStats -->
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=vinicioolivindo&theme=tokyonight&show_icons=true)
 
-[![spotify-github-profile](https://spotify-github-profile.kittinanx.com/api/view?uid=3162gbl4ic6ttk2n4ntjkwsbwima&cover_image=true&theme=novatorem&show_offline=false&background_color=121212&interchange=false&bar_color=53b14f&bar_color_cover=true)](https://github.com/kittinan/spotify-github-profile)
+[![spotify-github-profile](https://spotify-github-profile.kittinanx.com/api/view?uid=31hmmwzzh6otxht2cabnp32yi2qy&cover_image=true&theme=default&show_offline=true&background_color=121212&interchange=false&bar_color=53b14f&bar_color_cover=true)](https://github.com/kittinan/spotify-github-profile)
 
 <!-- Portfolio -->
 ## 👨‍💻 Portfolio:
