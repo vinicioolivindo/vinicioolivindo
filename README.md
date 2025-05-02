@@ -31,6 +31,7 @@
 
 <!-- Portfolio -->
 ## 👨‍💻 Portfolio:
+- [Quick Cart 🛒⚡](https://github.com/vinicioolivindo/QuickCart)
 - [Poke-Fav 2.0 🎮](https://github.com/vinicioolivindo/Poke-Fav-2.0)
 - [PicSort 📸](https://github.com/vinicioolivindo/PicSort)
 - [React Timer Pro⏱️](https://github.com/vinicioolivindo/React-Timer-Pro)
